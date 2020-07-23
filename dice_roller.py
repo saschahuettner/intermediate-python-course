@@ -7,8 +7,15 @@ def main():
   for i in range(0,dice_rolls):
     roll = rd.randint(1, 6)
     dice_sum += roll
-    print("You rolled a " + str(roll))
-    print('You have rolled a total of ' + str(dice_sum))
+    #print("You rolled a " + str(roll))
+    if roll == 1:
+      print('You have rolled a ' + str(roll) + ' failure!')
+    elif roll == 6:
+      print('You have rolled a ' + str(roll) + ' success!')
+    else:
+      print('You have rolled a ' + str(roll))
+  print('You have rolled a total of ' + str(dice_sum))
+
 
 if __name__== "__main__":
   main()
